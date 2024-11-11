@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otus.AnonymousObjects", "Otus.AnonymousObjects\Otus.AnonymousObjects.csproj", "{26EE01C1-B00A-4967-BB73-45599C9B94EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Otus.AnonymousObjects", "Otus.AnonymousObjects\Otus.AnonymousObjects.csproj", "{26EE01C1-B00A-4967-BB73-45599C9B94EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Otus.Tuples", "Otus.Tuples\Otus.Tuples.csproj", "{61A4362C-5858-44C2-A89C-900168D0BC9A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Otus.Delegates", "Otus.Delegates\Otus.Delegates.csproj", "{4854A6BB-EF13-4A44-B932-EE2822A0E0BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otus.LambdaExpressions", "Otus.LambdaExpressions\Otus.LambdaExpressions.csproj", "{D55B7ADB-DBF2-4A2B-92DB-72CB7A4482BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{26EE01C1-B00A-4967-BB73-45599C9B94EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26EE01C1-B00A-4967-BB73-45599C9B94EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26EE01C1-B00A-4967-BB73-45599C9B94EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61A4362C-5858-44C2-A89C-900168D0BC9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61A4362C-5858-44C2-A89C-900168D0BC9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61A4362C-5858-44C2-A89C-900168D0BC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61A4362C-5858-44C2-A89C-900168D0BC9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4854A6BB-EF13-4A44-B932-EE2822A0E0BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4854A6BB-EF13-4A44-B932-EE2822A0E0BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4854A6BB-EF13-4A44-B932-EE2822A0E0BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4854A6BB-EF13-4A44-B932-EE2822A0E0BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D55B7ADB-DBF2-4A2B-92DB-72CB7A4482BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D55B7ADB-DBF2-4A2B-92DB-72CB7A4482BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D55B7ADB-DBF2-4A2B-92DB-72CB7A4482BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D55B7ADB-DBF2-4A2B-92DB-72CB7A4482BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
