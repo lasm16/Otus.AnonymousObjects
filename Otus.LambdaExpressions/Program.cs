@@ -1,4 +1,7 @@
-﻿namespace Otus.LambdaExpressions
+﻿using System;
+using System.Xml.Linq;
+
+namespace Otus.LambdaExpressions
 {
     internal class Program
     {
@@ -18,9 +21,28 @@
         private static void ShowPlanet(PlanetCatalog catalog, string planetName)
         {
             _invokeCount++;
-            var func = ValidatePlanet(planetName);
-            var (orderNumber, equatorLenght, error) = catalog.GetPlanet(planetName, func);
-            if (error != null)
+            var (orderNumber, equatorLenght, error) = catalog.GetPlanet(planetName, x =>
+            {
+                if (_invokeCount % 3 == 0)
+                {
+                    return "Вы спрашиваете слишком часто";
+                }
+                return null;
+            });
+
+            var (orderNumber1, equatorLenght1, error1) = catalog.GetPlanet(planetName, x =>
+            {
+                if (planetName == "Лимония")
+                {
+                    return "Это запретная планета";
+                }
+                return null;
+            });
+            if (error != null && error1 != null)
+            {
+                Console.WriteLine(error1);
+            }
+            else if (error != null)
             {
                 Console.WriteLine(error);
             }
@@ -28,22 +50,6 @@
             {
                 Console.WriteLine($"Порядковый номер планеты = {orderNumber}, длина экватора = {equatorLenght}");
             }
-        }
-
-        private static Func<string, string?> ValidatePlanet(string name)
-        {
-            return validator =>
-            {
-                if (_invokeCount % 3 == 0)
-                {
-                    return "Вы спрашиваете слишком часто";
-                }
-                if (name == "Лимония")
-                {
-                    return "Это запретная планета";
-                }
-                return null;
-            };
         }
     }
 }
